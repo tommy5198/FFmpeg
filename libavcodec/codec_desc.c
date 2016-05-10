@@ -30,6 +30,14 @@
 #define MT(...) (const char *const[]){ __VA_ARGS__, NULL }
 
 static const AVCodecDescriptor codec_descriptors[] = {
+    /* testing codec */
+    {
+        .id        = AV_CODEC_ID_TMP,
+        .type      = AVMEDIA_TYPE_VIDEO,
+        .name      = "tmp",
+        .long_name = NULL_IF_CONFIG_SMALL("temp decoder for test"),
+        .props     = AV_CODEC_PROP_LOSSY,
+    },
     /* video codecs */
     {
         .id        = AV_CODEC_ID_MPEG1VIDEO,
